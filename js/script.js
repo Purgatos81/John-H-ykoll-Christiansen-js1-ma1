@@ -60,3 +60,10 @@ function thisList(list) {
 thisList(cats);
 
 //Question 8:
+// function createCats(cats) {
+//     for(i = 0; i < cats; i++) {
+//         let = 
+//     }
+// }
+
+// document.querySelector(".cat-container").innerHTML = "hi";
