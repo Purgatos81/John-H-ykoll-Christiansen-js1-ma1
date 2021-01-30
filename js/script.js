@@ -69,14 +69,23 @@ const CatContainer = document.querySelector("div.cat-container");
 //function in this question.
 //console.log(CatContainer);
 
-let catDiv = "";
+
 
 function createCats(list) {
+    let catDiv = "";
     for(i = 0; i < list.length; i++) {
         catDiv += `<div>
             <h5> Name: ${list[i].name}</h5>
+            </div>`; 
+        if(!isNaN(cats[i].age)) {
+            catDiv += `<div>
             <p> Age: ${list[i].age}</p>
         </div>`; 
+        } else {
+            catDiv += `<div>
+            <p> Age: Age unknown</p>
+        </div>`; 
+        }
     }
     return  CatContainer.innerHTML = catDiv;
 }
@@ -84,7 +93,9 @@ function createCats(list) {
 
 createCats(cats);
 
-//console.log(cats);
+
+
+
 
 
 
