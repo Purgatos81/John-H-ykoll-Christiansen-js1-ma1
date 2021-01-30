@@ -60,10 +60,23 @@ function thisList(list) {
 thisList(cats);
 
 //Question 8:
-// function createCats(cats) {
-//     for(i = 0; i < cats; i++) {
-//         let = 
-//     }
-// }
+const CatContainer = document.querySelector("div.cat-container");
 
-// document.querySelector(".cat-container").innerHTML = "hi";
+//console.log(CatContainer);
+
+
+function createCats(catses) {
+    for(i = 0; i < catses; i++) {
+        let catDiv;
+        catDiv += `<div>
+            <h5>${catses[i].name}</h5>
+            <p>${catses[i].age}</p>
+        </div>` 
+        return catDiv;
+    }
+    console.log(catDiv);
+}
+
+createCats(cats);
+
+CatContainer.innerHTML = catDiv;
