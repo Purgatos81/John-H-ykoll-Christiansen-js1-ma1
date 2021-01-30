@@ -12,6 +12,8 @@ const cats = [
     }
 ];
 
+//console.log(cats);
+
 //uestion 1:
 const Cat = {complain: function catFunct() {
     console.log("MeoW!");
@@ -62,21 +64,27 @@ thisList(cats);
 //Question 8:
 const CatContainer = document.querySelector("div.cat-container");
 
+//I chose to change the name of the parameter in the function
+//createCats to "list" to avoid confusion when working with the
+//function in this question.
 //console.log(CatContainer);
 
+let catDiv = "";
 
-function createCats(catses) {
-    for(i = 0; i < catses; i++) {
-        let catDiv;
+function createCats(list) {
+    for(i = 0; i < list.length; i++) {
         catDiv += `<div>
-            <h5>${catses[i].name}</h5>
-            <p>${catses[i].age}</p>
-        </div>` 
-        return catDiv;
+            <h5> Name: ${list[i].name}</h5>
+            <p> Age: ${list[i].age}</p>
+        </div>`; 
     }
-    console.log(catDiv);
+    return  CatContainer.innerHTML = catDiv;
 }
+
 
 createCats(cats);
 
-CatContainer.innerHTML = catDiv;
+//console.log(cats);
+
+
+
